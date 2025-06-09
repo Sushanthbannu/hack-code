@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hack & Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      background-attachment: fixed;
+      color: #ffffff;
+      scroll-behavior: smooth;
+      display: flex;
+    }
+    .sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 300px;
+      height: calc(100% - 100px);
+      overflow-y: auto;
+      background-color: #1a1a1a;
+      padding: 2rem;
+      border-right: 2px solid #00C2FF;
+    }
+    .sidebar h3 {
+      color: #00C2FF;
+      margin-bottom: 0.5rem;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding-left: 10px;
+    }
+    .sidebar ul li a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 0.3rem 0;
+    }
+    .sidebar ul li a:hover {
+      color: #00C2FF;
+    }
+    .main-content {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+      padding-left:50px;
+    }
+    .content-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+   
+    main img {
+      max-width: 100%;
+      height: auto;
+      margin: 1em 0;
+      border-radius: 8px;
+    }
+    .logo-right {
+      float: right;
+      width: 120px;
+      margin-left: 20px;
+    }
+    #toc {
+      position: fixed;
+      top: 100px;
+      left: 20px;
+      width: 220px;
+      height: 80vh;
+      overflow-y: auto;
+      background: #f4f4f4;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+    }
+    #toc h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      text-align: center;
+    }
+    #toc ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.9em;
+    }
+    #toc ul li {
+      margin: 0.5em 0;
+    }
+    #toc ul li a {
+      text-decoration: none;
+      color: #007acc;
+    }
+    #toc ul li a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      margin-left: 260px;
+      padding: 2em;
+      max-width: 900px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+
+    .center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:40px;
+  
+}
+
+.fancy-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #00C2FF;
+  background: transparent;
+  border: 2px solid #00C2FF;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fancy-btn:hover,
+.fancy-btn:focus {
+  background-color: #00C2FF;
+  color: #ffffff;
+  outline: none;
+}
+
+
+
+  </style>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="style_mobile.css">
+       <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo 8.png" alt="Hack & Code Logo" style="height: 80px; width: auto;" />
+        <span style="font-size: 2.5rem; font-weight:10; color: #00C2FF; font-family: 'Bauhaus 93', sans-serif;">HACK & CODE</span>
+      </div>
+    <div class="tagline">Learn | Build | Secure </div>
+    <nav>
+      <a href="index.html" onclick="showPage('home')" class="nav-link active">Home</a>
+      <a href="index.html" onclick="showPage('about')" class="nav-link">About</a>
+      <a href="index.html" onclick="showPage('courses')" class="nav-link">Courses</a>
+      <a href="index.html" onclick="showPage('contact')" class="nav-link">Contact</a>
+      <a href="#Linux-basics-pdf"  class="nav-link">Linux basics pdf</a>
+      
+    </nav>
+  </header>
+  
+  <div class="sidebar">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#what-is-linux">What is Linux?</a></li>
+      <li><a href="#history">History of Linux</a></li>
+      <li><a href="#linux-distributions">Linux Distributions</a></li>
+      <li><a href="#linux-kernel">The Linux Kernel</a></li>
+      <li><a href="#filesystem-structure">Filesystem Structure</a></li>
+      <li><a href="#basic-commands">Basic Linux Commands</a></li>
+      <li><a href="#permissions">File Permissions</a></li>
+      <li><a href="#process-management">Process Management</a></li>
+      <li><a href="#package-management">Package Management</a></li>
+      <li><a href="#shell-scripting">Shell Scripting Basics</a></li>
+      <li><a href="#networking-basics">Networking Basics</a></li>
+      <li><a href="#security-tips">Security Tips</a></li>
+      <li><a href="#resources">Learning Resources</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+       <li><a href="#Linux-basics-pdf">Linux basics pdf</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    
+    <div id="ethical-hacking" class="page active">
+        
+      <section class="content-section">
+         <h1
+         style="padding-right:80px;"
+         >Linux Basics</h1>
+         <section id="what-is-linux">
+      <h2>What is Linux?</h2>
+      <img src="data:image/png;base64,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" alt="Linux Logo" class="logo-right" />
+      <p>Linux is an open-source, Unix-like operating system kernel that forms the foundation of many operating systems called Linux distributions or distros. Unlike proprietary operating systems, Linux is freely available and maintained by a global community of developers.</p>
+      <p>Linux is widely used in servers, desktops, mobile devices (Android), embedded systems, and supercomputers. Its stability, security, and flexibility have made it a preferred choice for developers and enterprises.</p>
+
+          <div class="center-button" >
+            <button class="fancy-btn" onclick="window.location.href='#what-is-linux'">Scroll Down to get free pdf </button>
+
+          </div>  
+
+    </section>
+
+    <section id="history">
+      <h2>History of Linux</h2>
+      <p>Linux was created by Linus Torvalds in 1991 while he was a student at the University of Helsinki. He developed the Linux kernel as a free alternative to the proprietary Unix systems.</p>
+      <p>The kernel was released under the GNU General Public License (GPL), allowing anyone to use, modify, and distribute the software. The combination of the Linux kernel with GNU tools created a fully functional operating system.</p>
+      <p>Over time, various distributions emerged, tailoring Linux for different purposes and users.</p>
+    </section>
+
+    <section id="linux-distributions">
+      <h2>Linux Distributions</h2>
+      <p>Linux distributions bundle the Linux kernel with various software, utilities, and package management systems. Popular distributions include:</p>
+      <ul>
+        <li><strong>Ubuntu:</strong> User-friendly and popular for desktops and servers.</li>
+        <li><strong>Fedora:</strong> Cutting-edge technologies and Red Hat backing.</li>
+        <li><strong>Debian:</strong> Stable and well-tested, often used as a base for other distros.</li>
+        <li><strong>CentOS / Rocky Linux:</strong> Enterprise-grade, commonly used for servers.</li>
+        <li><strong>Arch Linux:</strong> Rolling release with user customization focus.</li>
+      </ul>
+      <p>Each distro serves different needs, from beginner-friendly to advanced customization.</p>
+    </section>
+
+    <section id="linux-kernel">
+      <h2>The Linux Kernel</h2>
+      <p>The Linux kernel is the core component of the operating system. It manages hardware, system resources, process scheduling, memory, and device drivers.</p>
+      <p>The kernel interacts directly with the hardware and provides services to user applications and software layers above it.</p>
+      <p>Linux kernel development is a collaborative effort by thousands of contributors worldwide, coordinated by Linus Torvalds.</p>
+    </section>
+
+    <section id="filesystem-structure">
+      <h2>Filesystem Structure</h2>
+      <p>Linux follows the Filesystem Hierarchy Standard (FHS), organizing files and directories in a tree structure starting at the root <code>/</code>.</p>
+      <ul>
+        <li><code>/bin</code> - Essential binaries and commands</li>
+        <li><code>/etc</code> - System configuration files</li>
+        <li><code>/home</code> - User home directories</li>
+        <li><code>/lib</code> - Shared libraries</li>
+        <li><code>/usr</code> - User utilities and applications</li>
+        <li><code>/var</code> - Variable data like logs and spool files</li>
+        <li><code>/tmp</code> - Temporary files</li>
+      </ul>
+      <p>Understanding the directory structure helps navigate and manage the system efficiently.</p>
+    </section>
+
+    <section id="basic-commands">
+      <h2>Basic Linux Commands</h2>
+      <p>Here are some essential commands to get started:</p>
+      <ul>
+        <li><code>ls</code> - List directory contents</li>
+        <li><code>cd</code> - Change directory</li>
+        <li><code>pwd</code> - Print current directory path</li>
+        <li><code>cp</code> - Copy files or directories</li>
+        <li><code>mv</code> - Move or rename files</li>
+        <li><code>rm</code> - Remove files or directories</li>
+        <li><code>mkdir</code> - Create directories</li>
+        <li><code>cat</code> - Display file contents</li>
+        <li><code>echo</code> - Print text to the terminal</li>
+        <li><code>man</code> - Show manual for commands</li>
+      </ul>
+    </section>
+
+    <section id="permissions">
+      <h2>File Permissions</h2>
+      <p>Linux uses a permission system to control access to files and directories. Permissions are divided into three categories:</p>
+      <ul>
+        <li><strong>Read (r):</strong> View contents</li>
+        <li><strong>Write (w):</strong> Modify contents</li>
+        <li><strong>Execute (x):</strong> Run as a program or script</li>
+      </ul>
+      <p>Permissions are assigned to three types of users:</p>
+      <ul>
+        <li><strong>Owner:</strong> The user who owns the file</li>
+        <li><strong>Group:</strong> A set of users assigned to a group</li>
+        <li><strong>Others:</strong> Everyone else</li>
+      </ul>
+      <p>Use the <code>chmod</code> command to change permissions and <code>chown</code> to change ownership.</p>
+      <pre><code>chmod 755 script.sh
+chown user:group file.txt</code></pre>
+    </section>
+
+    <section id="process-management">
+      <h2>Process Management</h2>
+      <p>Processes are running instances of programs. Linux offers tools to view and manage processes:</p>
+      <ul>
+        <li><code>ps</code> - List running processes</li>
+        <li><code>top</code> - Interactive process viewer</li>
+        <li><code>kill</code> - Send signals to processes, typically to terminate</li>
+        <li><code>htop</code> - Enhanced interactive process viewer (needs installation)</li>
+      </ul>
+      <p>Example to kill a process by PID:</p>
+      <pre><code>kill 1234</code></pre>
+    </section>
+
+    <section id="package-management">
+      <h2>Package Management</h2>
+      <p>Package managers help install, update, and remove software. Different distros use different package managers:</p>
+      <ul>
+        <li><strong>APT (Debian/Ubuntu):</strong> <code>sudo apt update && sudo apt install package-name</code></li>
+        <li><strong>YUM/DNF (Fedora/CentOS):</strong> <code>sudo dnf install package-name</code></li>
+        <li><strong>PACMAN (Arch Linux):</strong> <code>sudo pacman -S package-name</code></li>
+      </ul>
+    </section>
+
+    <section id="shell-scripting">
+      <h2>Shell Scripting Basics</h2>
+      <p>Shell scripts automate tasks using a series of commands written in a file with <code>.sh</code> extension.</p>
+      <p>Example script:</p>
+      <pre><code>#!/bin/bash
+echo "Hello, Linux user!"
+date</code></pre>
+      <p>Make the script executable and run it:</p>
+      <pre><code>chmod +x script.sh
+./script.sh</code></pre>
+      <p>Shell scripting can include variables, conditionals, loops, and functions.</p>
+    </section>
+
+    <section id="networking-basics">
+      <h2>Networking Basics</h2>
+      <p>Linux provides powerful tools to manage and troubleshoot network connections:</p>
+      <ul>
+        <li><code>ifconfig</code> or <code>ip addr</code> - Show network interfaces</li>
+        <li><code>ping</code> - Test connectivity to another host</li>
+        <li><code>netstat</code> - Display network connections</li>
+        <li><code>ssh</code> - Secure remote login</li>
+      </ul>
+    </section>
+
+    <section id="security-tips">
+      <h2>Security Tips</h2>
+      <ul>
+        <li>Regularly update your system with security patches</li>
+        <li>Use strong passwords and SSH keys for remote access</li>
+        <li>Configure a firewall (e.g., UFW) to limit open ports</li>
+        <li>Limit root user access and use <code>sudo</code> for administrative tasks</li>
+        <li>Monitor system logs for suspicious activity</li>
+      </ul>
+    </section>
+
+    <section id="resources">
+      <h2>Learning Resources</h2>
+      <ul>
+        <li><a href="https://linuxjourney.com/">Linux Journey</a> - Interactive tutorials</li>
+        <li><a href="https://www.tldp.org/LDP/intro-linux/html/">The Linux Documentation Project</a></li>
+        <li><a href="https://ubuntu.com/tutorials">Ubuntu Tutorials</a></li>
+        <li><a href="https://www.udemy.com/course/linux-for-beginners/">Linux for Beginners (Udemy)</a></li>
+      </ul>
+    </section>
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>Linux is a powerful and versatile operating system that forms the backbone of many technologies today. Whether you're a developer, system administrator, or just curious about open-source software, learning Linux opens up a world of possibilities.</p>
+      <p>Start exploring Linux today, and you'll find a supportive community and endless resources to help you on your journey.</p>
+    </section>
+     <section id="Linux-basics-pdf" class="content-section">
+  <h2>Linux basics pdf</h2>
+  <iframe
+  src="linuxbasicsforhackers.pdf#toolbar=0"
+  width="100%"
+  height="900px"
+  style="border: none;"
+></iframe></section>
+
+
+
+    </div>
+  </div>
+
+  
+  <script>
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && e.key === 'p') || e.key === 'PrintScreen') {
+      e.preventDefault();
+      alert("Printing is disabled");
+    }
+  });
+   document.addEventListener('keydown', function (e) {
+    if (
+      e.ctrlKey && (e.key === 'p' || e.key === 's') || // Ctrl+P, Ctrl+S
+      e.key === 'F12' ||                               // Developer tools
+      (e.ctrlKey && e.shiftKey && e.key === 'I') ||   // Inspect element
+      (e.ctrlKey && e.shiftKey && e.key === 'C')
+    ) {
+      e.preventDefault();
+      alert("This action is disabled.");
+    }
+  });
+</script>
+
+
+</body>
+</html>

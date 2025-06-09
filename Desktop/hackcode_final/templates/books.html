@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Books Library - Hack & Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.cdnfonts.com/css/bauhaus-93" rel="stylesheet" />
+  <link rel="stylesheet" href="style_mobile.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+      color: #fff;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background-color: #1a1a1a;
+      border-bottom: 2px solid #00C2FF;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #00C2FF;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 5px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #00C2FF;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    #mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #1a1a1a;
+      padding: 10px;
+    }
+
+    #menu-toggle {
+      display: none;
+      position: absolute;
+      left: 20px;
+      top: 25px;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: #00C2FF;
+    }
+
+    main {
+      padding: 120px 30px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .search-bar {
+      max-width:300px;
+      margin: 0 auto 30px;
+      padding-right:5rem;
+      position: relative;
+      color: #333;
+    }
+     
+   
+
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .books-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+    }
+
+    .book {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      color: #00C2FF;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .book:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00C2FF;
+    }
+
+    .book img {
+      width: 100%;
+      height:350px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #00C2FF;
+    }
+
+    .book-info {
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .book-info h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .book-info p {
+      font-size: 0.8rem;
+      color: #ccc;
+      margin: 5px 0 0;
+    }
+
+    @media (max-width: 768px) {
+      #menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+      }
+
+      #mobile-menu.show {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .book img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    <a href="#" onclick="showPage('home'); closeMenu();" style="text-decoration: none; color: #00C2FF;">
+      <div class="logo">
+        <img src="logo 8.png" alt="Hack & Code Logo" style="height: 50px;" />
+        <span style="font-size: 2rem; font-family: 'Bauhaus 93', sans-serif;">HACK & CODE</span>
+      </div>
+    </a>
+
+    <div class="tagline">Learn | Build | Secure</div>
+
+    <nav>
+      <a href="index.html" onclick="showPage('home')">Home</a>
+      <a href="index.html" onclick="showPage('courses')">Courses</a>
+      <a href="index.html" onclick="showPage('tools')">Tools</a>
+      <a href="books.html">Books</a>
+      <a href="index.html" onclick="showPage('about')">About</a>
+      <a href="index.html"onclick="showPage('contact')">Contact</a>
+    </nav>
+
+    <div id="mobile-menu">
+      <a href="index.html"onclick="showPage('home'); closeMenu()">Home</a>
+      <a href="index.html" onclick="showPage('courses'); closeMenu()">Courses</a>
+      <a href="index.html" onclick="showPage('tools'); closeMenu()">Tools</a>
+      <a href="books.html">Books</a>
+      <a href="index.html" onclick="showPage('about'); closeMenu()">About</a>
+      <a href="index.html" onclick="showPage('contact'); closeMenu()">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <h1>📚 Hack & Code Library</h1>
+    <p>All your hacking and programming books in one place.</p>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search books by title..." />
+    </div>
+
+    <div class="books-container" id="booksContainer">
+      <a href="book-viewer.html?file=linuxbasicsforhackers.pdf" class="book">
+        <img src="https://m.media-amazon.com/images/I/81N2FjUR-XL._UF1000,1000_QL80_.jpg" />
+        <div class="book-info">
+          <h3>Linux Basics for Hackers</h3>
+          <p>Intro to Linux for security pros</p>
+        </div>
+      </a>
+
+      <a href="book-viewer.html?file=hacking_artofexploitation_2ndedition.pdf" class="book">
+        <img src="https://m.media-amazon.com/images/I/91dLDp5XzYL._UF1000,1000_QL80_.jpg" />
+        <div class="book-info">
+          <h3>Hacking: The Art of Exploitation</h3>
+          <p>Master the art of hacking</p>
+        </div>
+      </a>
+
+      <a href="book-viewer.html?file=thewebapplicationhackers.pdf" class="book">
+        <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1347415849i/1914619.jpg" />
+        <div class="book-info">
+          <h3>The Web App Hacker's Handbook</h3>
+        </div>
+      </a>
+
+      <a href="book-viewer.html?file=metasploit-mastery.pdf" class="book">
+        <img src="book5.jpg" />
+        <div class="book-info">
+          <h3>Metasploit Mastery</h3>
+          <p>Exploit and defend with Metasploit</p>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("mobile-menu").classList.toggle("show");
+    });
+
+    function closeMenu() {
+      document.getElementById("mobile-menu").classList.remove("show");
+    }
+
+    // Search functionality
+    const searchInput = document.getElementById("searchInput");
+    const books = document.querySelectorAll(".book");
+
+    searchInput.addEventListener("input", function () {
+      const query = this.value.toLowerCase();
+
+      books.forEach(book => {
+        const title = book.querySelector("h3").textContent.toLowerCase();
+        book.style.display = title.includes(query) ? "flex" : "none";
+      });
+    });
+  </script>
+</body>
+</html>

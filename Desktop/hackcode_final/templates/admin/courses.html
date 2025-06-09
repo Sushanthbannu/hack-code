@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><body>
+<h2>Manage Courses</h2>
+<form method="POST">
+  Title: <input name="title" type="text"><br>
+  Description: <textarea name="description"></textarea><br>
+  Filename: <input name="filename" type="text"><br>
+  <button type="submit">Add Course</button>
+</form>
+<ul>
+{% for course in courses %}
+  <li><strong>{{ course.title }}</strong> - {{ course.filename }}</li>
+{% endfor %}
+</ul>
+<a href="/admin/dashboard">Back</a>
+</body></html>

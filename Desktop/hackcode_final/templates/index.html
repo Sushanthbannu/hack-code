@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hack & Code</title>
+  
+  <link rel="stylesheet" href="style_mobile.css" /> 
+  <link href="https://fonts.cdnfonts.com/css/bauhaus-93" rel="stylesheet">
+ 
+</head>
+<body>
+  <header>
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    <a href="#" onclick="showPage('home'); closeMenu();" style="text-decoration: none; color: #00C2FF;">
+      <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo 8.png" alt="Hack & Code Logo" style="height: 80px; width: auto;" />
+        <span style="font-size: 2.5rem; font-weight:10; color: #00C2FF; font-family: 'Bauhaus 93', sans-serif;">HACK & CODE</span>
+      </div>
+    </a>
+    <div class="tagline">Learn | Build | Secure </div>
+      <!-- Desktop navigation -->
+    <nav>
+      <a href="#" onclick="showPage('home')" class="nav-link active">Home</a>
+      <a href="#" onclick="showPage('courses')" class="nav-link">Courses</a>
+      <a href="#" onclick="showPage('Tools')" class="nav-link">Tools</a>
+      <a href="books.html" class="nav-link">Books</a>
+      <a href="#" onclick="showPage('about')" class="nav-link">About</a>
+      <a href="#" onclick="showPage('contact')" class="nav-link">Contact</a>
+    </nav>
+
+    <nav id="mobile-menu" aria-label="Mobile Navigation">
+      <a href="#" onclick="showPage('home'); closeMenu();" class="nav-link active">Home</a>
+      <a href="#" onclick="showPage('courses'); closeMenu();" class="nav-link">Courses</a>
+      <a href="#" onclick="showPage('Tools'); closeMenu();" class="nav-link">Tools</a>
+      <a href="books.html" class="nav-link">Books</a>
+      <a href="#" onclick="showPage('about'); closeMenu();" class="nav-link">About</a>
+      <a href="#" onclick="showPage('contact'); closeMenu();" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME PAGE -->
+  <div id="home" class="page active">
+    <section class="hero">
+      <div class="hero-logo">
+        
+      </div>
+      <div class="hero-content">
+        <h1>Welcome to Hack & Code</h1>
+        <p>Learn Ethical Hacking, Cybersecurity, and Coding Skills from Scratch</p>
+        <a href="#" onclick="showPage('courses')" class="cta-button">Get Started</a>
+      </div>
+    </section>
+
+    <section class="categories" id="categories">
+      <h2>Choose Your Path</h2>
+      <p style="color: #ccc; font-size: 1rem; max-width: 600px; margin: 0 auto 2rem;">
+        Explore curated learning paths to master cybersecurity, development, and more. Click on a category to begin your journey.
+      </p>
+      <div class="category-grid">
+        <a href="ethical hacking.html" class="category" style="--delay: 0s">
+          <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Ethical Hacking" />
+          <span>Ethical Hacking</span>
+        </a>
+        <a href="cybersecurity.html" class="category" style="--delay: 0.1s">
+          <img src="https://cdn-icons-png.flaticon.com/512/4285/4285546.png" alt="Cybersecurity" />
+          <span>Cybersecurity</span>
+        </a>
+        <a href="web.html" class="category" style="--delay: 0.2s">
+          <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Web Development" />
+          <span>Web Development</span>
+        </a>
+        <a href="python.html" class="category" style="--delay: 0.3s">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python Programming" />
+          <span>Python Programming</span>
+        </a>
+        <a href="linux.html" class="category" style="--delay: 0.4s">
+          <img src="linux-logo-png-transparent-background-photoshop-11660298441zrotfedql9 (1).png" alt="Linux Basics" />
+          <span>Linux Basics</span>
+        </a>
+        <a href="networking.html" class="category" style="--delay: 0.5s">
+          <img src="https://cdn-icons-png.flaticon.com/512/2886/2886317.png" alt="Networking" />
+          <span>Networking</span>
+        </a>
+      </div>
+    </section>
+    <!-- TOOLS SECTION -->
+
+  <section class="categories" id="categories">
+      <h2>Explore some tools</h2>
+      <p style="color: #ccc; font-size: 1rem; max-width: 600px; margin: 0 auto 2rem;">
+        Discover essential tools for ethical hacking and cybersecurity. Click on a tool to learn more about its features and applications.
+      </p>
+      <div class="category-grid">
+        <a href="nmap.html" class="category" style="--delay: 0s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4vbkndf2gRS3v-7lormlTG_irfzTUQHd6-g&s" alt="Ethical Hacking" />
+          <span>Nmap</span>
+        </a>
+        <a href="aircrack-ng.html" class="category" style="--delay: 0.1s">
+          <img style="width:300;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq5XAXu-hWPig2Q60dL_JqHpyZkoUEckjFFw&s" alt="Cybersecurity" />
+          <span>Aircrack-ng</span>
+        </a>
+        <a href="metasploit.html" class="category" style="--delay: 0.2s">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWTp4q9qinbKXUwNbOP4_6OmnHBqyP3C-Qag&s" alt="Web Development" />
+          <span>Metasploit</span>
+        </a>
+
+
+        <div class="tools-section">
+    <div class="center-button" ><style>
+
+       .center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:60px;
+  padding-top: 5rem;
+  padding-left: 5rem;
+  
+  
+  
+}
+
+.fancy-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #00C2FF;
+  background: transparent;
+  border: 2px solid #00C2FF;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.fancy-btn:hover,
+.fancy-btn:focus {
+  background-color: #00C2FF;
+  color: #ffffff;
+  outline: none;
+}
+
+
+    </style>
+            <button class="fancy-btn" href="#" onclick="showPage('Tools')" >Explore All Tools </button>
+
+          </div> 
+        
+      </div>
+    </section>
+  </div>
+  
+
+
+   <!-- Books PAGE -->
+   
+
+   <div class="books-container">
+      <a href="book-viewer.html?file=linux-basics.pdf" class="book" title="Linux Basics for Hackers">
+        <img src="https://m.media-amazon.com/images/I/81N2FjUR-XL._UF1000,1000_QL80_.jpg" alt="Linux Basics for Hackers" />
+        <div class="book-info">
+          <h3>Linux Basics for Hackers</h3>
+          <p>Introduction to Linux for security pros.</p>
+        </div>
+      </a>
+  
+
+
+        <div class="tools-section">
+    <div class="center-button" ><style>
+
+       .center-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:60px;
+  padding-top: 5rem;
+  padding-left: 5rem;
+  
+  
+  
+}
+
+.fancy-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #00C2FF;
+  background: transparent;
+  border: 2px solid #00C2FF;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.fancy-btn:hover,
+.fancy-btn:focus {
+  background-color: #00C2FF;
+  color: #ffffff;
+  outline: none;
+}
+
+
+
+  
+
+    
+    main {
+      padding: 120px 30px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .books-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+    }
+
+    .book {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+      color: #00C2FF;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .book:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00C2FF;
+    }
+
+    .book img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #00C2FF;
+    }
+
+    .book-info {
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .book-info h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    .book-info p {
+      font-size: 0.8rem;
+      color: #ccc;
+      margin: 5px 0 0;
+    }
+
+    @media (max-width: 500px) {
+      .book img {
+        height: 220px;
+      }
+    }
+
+
+    </style>
+            <a href="books.html"><button class="fancy-btn" href="books.html" >Explore All Books </button></a>
+
+          </div> 
+        
+      </div>
+    </section>
+  </div>
+
+
+  
+
+  </div>
+
+
+  
+
+  </div>
+  </div>
+  
+
+
+ 
+
+
+
+  <!-- ABOUT PAGE -->
+  <div id="about" class="page">
+    <section class="content-section">
+      <h1>About Hack & Code</h1>
+      <p>
+        Hack & Code is a free  premier educational platform dedicated to teaching ethical hacking, cybersecurity, and programming skills. 
+        Our mission is to empower the next generation of cybersecurity professionals and developers with practical, hands-on knowledge.
+      </p>
+      
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-number">10,000+</div>
+          <div class="stat-label">Students Trained</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Expert Instructors</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Course Modules</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">95%</div>
+          <div class="stat-label">Success Rate</div>
+        </div>
+      </div>
+
+      <h2>Our Vision</h2>
+      <p>
+        To create a world where cybersecurity knowledge is accessible to everyone, fostering a community of ethical hackers 
+        and security professionals who protect the digital landscape.
+      </p>
+
+      <h2>Why Choose Us?</h2>
+      <p>
+        Our courses are designed by industry experts with real-world experience. We focus on practical, hands-on learning 
+        that prepares you for actual cybersecurity challenges. From beginner-friendly introductions to advanced penetration 
+        testing techniques, we cover it all.
+      </p>
+
+      <h2>Our Approach</h2>
+      <p>
+        We believe in learning by doing. Our courses include virtual labs, real-world scenarios, and interactive exercises 
+        that simulate actual cybersecurity environments. You'll gain not just theoretical knowledge, but practical skills 
+        that you can apply immediately.
+      </p>
+    </section>
+  </div>
+
+  <!-- COURSES PAGE -->
+  <div id="courses" class="page">
+    <section class="content-section">
+      <h1
+      style="font-size:50px;
+      align-items: center;
+      padding-top: opx;"
+      
+      >Our Courses</h1>
+      <p
+      
+      style="display: flex;
+      text-align: center;
+      font-weight: 30px;
+      font-size: 20px;"
+      
+      >
+        Comprehensive courses designed to take you from beginner to expert in cybersecurity and programming. 
+        Each course includes hands-on labs, real-world projects, and industry certifications.
+      </p>
+
+      <div class="course-grid">
+        <div class="course-card">
+          <a href="ethical hacking.html" class="category" style="--delay: 0s">
+          <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Ethical Hacking Fundamentals" />
+          
+        
+          <h3
+          style="font-size: 17px;"
+          >Ethical Hacking Fundamentals</h3>
+          <p>
+            Learn the basics of ethical hacking, including reconnaissance, vulnerability assessment, and penetration testing. 
+            Perfect for beginners looking to enter the cybersecurity field.
+          </p>
+          <div class="duration">Duration: 8 weeks | Beginner Level</div></a>
+        </div>
+
+        <div class="course-card">
+          <a href="linux.html" class="category" style="--delay: 0.4s">
+          <img src="linux-logo-png-transparent-background-photoshop-11660298441zrotfedql9 (1).png" alt="Advanced Penetration Testing" />
+          
+       
+          <h3
+          style="font-size: 17px;"
+          >Advanced Penetration Testing</h3>
+          <p>
+            Master advanced penetration testing techniques, exploit development, and post-exploitation strategies. 
+            Includes real-world scenarios and industry-standard tools.
+          </p>
+          <div class="duration">Duration: 12 weeks | Advanced Level</div> </a>
+        </div>
+
+        <div class="course-card">
+          
+          
+          <a href="#" onclick="showPage('courses')" class="category" style="--delay: 0.3s">
+          <img src="cyber-security-png-hd-Cadenas.png" alt="Cybersecurity Analyst" />
+          
+        
+        <h3>Cybersecurity Analyst</h3>
+          <p>
+            Comprehensive training in security monitoring, incident response, and threat analysis. 
+            Learn to protect organizations from cyber threats.
+          </p>
+          <div class="duration">Duration: 10 weeks | Intermediate Level</div></a>
+        </div>
+
+        <div class="course-card">
+          <a href="#" onclick="showPage('courses')" class="category" style="--delay: 0.3s">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python for Cybersecurity" />
+          
+        
+          <h3>Python for Cybersecurity</h3>
+          <p>
+            Master Python programming specifically for cybersecurity applications. Build security tools, 
+            automate tasks, and analyze security data.
+          </p>
+          <div class="duration">Duration: 6 weeks | Beginner to Intermediate</div></a>
+        </div>
+
+        <div class="course-card">
+          <a href="#" onclick="showPage('courses')" class="category" style="--delay: 0.2s">
+          <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Web Application Security" />
+          
+        
+          <h3>Web Application Security</h3>
+          <p>
+            Learn to identify and exploit web application vulnerabilities. Master OWASP Top 10, 
+            secure coding practices, and web security testing.
+          </p>
+          <div class="duration">Duration: 8 weeks | Intermediate Level</div></a>
+        </div>
+
+        <div class="course-card">
+          <a href="#" onclick="showPage('courses')" class="category" style="--delay: 0.5s">
+          <img src="https://cdn-icons-png.flaticon.com/512/2886/2886317.png" alt="Network Security & Defense" />
+          
+        
+          <h3>Network Security & Defense</h3>
+          <p>
+            Understand network protocols, implement security controls, and defend against network-based attacks. 
+            Hands-on experience with firewalls, IDS/IPS, and network monitoring.
+          </p>
+          <div class="duration">Duration: 10 weeks | Intermediate Level</div></a>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- TOOLS PAGE -->
+  <div id="Tools" class="page">
+    <section class="content-section">
+      <h1
+      style="font-size:50px;
+      align-items: center;
+      padding-top: opx;"
+      
+      >Famous Tools for Kali Linux</h1>
+      <p
+      
+      style="display: flex;
+      text-align: center;
+      font-weight: 30px;
+      font-size: 20px;"
+      
+      >
+        Explore the essential tools used in Kali Linux for ethical hacking and penetration testing. 
+        Each tool is designed to help you identify vulnerabilities, exploit weaknesses, and secure systems effectively.
+      </p>
+
+      <div class="course-grid">
+        <div class="course-card">
+          <a href="nmap.html" class="category" style="--delay: 0s">
+          <img src="data:image/jpeg;base64,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" alt="Ethical Hacking Fundamentals" />
+          
+        
+          <h3
+          style="font-size:30px;"
+          >Nmap</h3>
+          <p>
+            Nmap is a powerful network scanner used to explore and map networks, identify open ports, and detect vulnerabilities. It's an essential tool for network analysis and security auditing.
+          </p>
+          <div class="duration">Learn more</div></a>
+        </div>
+
+        <div class="course-card">
+          <a href="nmap.html" class="category" style="--delay: 0.4s">
+          <img src="https://e1.pngegg.com/pngimages/342/752/png-clipart-macos-app-icons-wireshark.png" alt="Advanced Penetration Testing" />
+          
+       
+          <h3
+          style="font-size:25px;"
+          >Wireshark</h3>
+          <p>
+           Wireshark is a network protocol analyzer that allows you to capture and examine network traffic, aiding in troubleshooting, security auditing, and understanding network protocols.
+          </p>
+          <div class="duration">Learn more</div> </a>
+        </div>
+
+        <div class="course-card">
+          
+          
+          <a href="aircrack-ng.html" class="category" style="--delay: 0.3s">
+          <img src="https://www.aircrack-ng.org/resources/aircrack-ng-new-logo.jpg"
+          style="width: 200px;" alt="Cybersecurity Analyst" />
+          
+        
+        <h3>Aircrack-ng</h3>
+          <p>
+            Aircrack-ng is a suite of tools focused on wireless network security, particularly for monitoring, attacking, cracking, and testing wireless networks.
+          </p>
+          <div class="duration">Learn more</div></a>
+        </div>
+
+        <div class="course-card">
+          <a href="metasploit.html" class="category" style="--delay: 0.3s">
+          <img src="https://miro.medium.com/v2/resize:fit:620/1*vWrS07lPwqdG76I3T8aqGA.png" 
+          style="width: 300px;"  alt="Python for Cybersecurity" />
+          
+        
+          <h3>Metasploit</h3>
+          <p>
+            The Metasploit Framework is a popular penetration testing framework used for developing, testing, and executing exploits.
+          </p>
+          <div class="duration">Learn more</div></a>
+        </div>
+
+        <div class="course-card">
+          <a href="#" onclick="showPage('courses')" class="category" style="--delay: 0.2s">
+          <img style="width: 300px;"  src="https://miro.medium.com/v2/resize:fit:640/1*0xUo7_LpXBXFdAc5J3UAnA.png" />
+          
+        
+          <h3>Burp Suite</h3>
+          <p>
+            Burp Suite is an integrated platform for web application security testing, offering features like intercepting proxies, scanning, and analyzing web applications for vulnerabilities. 
+          </p>
+          <div class="duration">Learn more</div></a>
+        </div>
+
+        <div class="course-card">
+          <a href="#" onclick="showPage('courses')" class="category" style="--delay: 0.5s">
+          <img src="https://cdn-icons-png.flaticon.com/512/2886/2886317.png" alt="Network Security & Defense" />
+          
+        
+          <h3>Network Security & Defense</h3>
+          <p>
+            Understand network protocols, implement security controls, and defend against network-based attacks. 
+            Hands-on experience with firewalls, IDS/IPS, and network monitoring.
+          </p>
+          <div class="duration">Duration: 10 weeks | Intermediate Level</div></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact" class="page">
+    <section class="content-section">
+      <h1>Get In Touch</h1>
+      <p style="text-align: center; margin-bottom: 3rem;">
+        Ready to start your cybersecurity journey? Have questions about our courses? 
+        We'd love to hear from you!
+      </p>
+
+      <div class="contact-form">
+        <form onsubmit="handleFormSubmit(event)">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="course">Course Interest</label>
+            <select id="course" name="course" style="width: 100%; padding: 1rem; border: 2px solid #333; border-radius: 8px; background-color: #1a1a1a; color: #fff; font-family: inherit; box-sizing: border-box;">
+              <option value="">Select a course</option>
+              <option value="ethical-hacking">Ethical Hacking Fundamentals</option>
+              <option value="penetration-testing">Advanced Penetration Testing</option>
+              <option value="cybersecurity-analyst">Cybersecurity Analyst</option>
+              <option value="python-security">Python for Cybersecurity</option>
+              <option value="web-security">Web Application Security</option>
+              <option value="network-security">Network Security & Defense</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your goals and any questions you have..."></textarea>
+          </div>
+
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem; padding: 2rem; background-color: #222; border-radius: 12px;">
+        <h2 style="color: #00C2FF; margin-bottom: 1rem;">Other Ways to Reach Us</h2>
+        <p><strong>Email:</strong> info@hackandcode.com</p>
+        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+        <p><strong>Address:</strong> 123 Cyber Street, Tech City, TC 12345</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Hack & Code. All rights reserved.
+  </footer>
+
+  <script>
+    function showPage(pageName) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      
+      // Show selected page
+      document.getElementById(pageName).classList.add('active');
+      
+      // Update navigation
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => link.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      // Scroll to top
+      window.scrollTo(0, 0);
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData);
+      
+      // Simulate form submission
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      
+      // Reset form
+      event.target.reset();
+    }
+
+    // Add smooth scrolling for anchor links
+    document.addEventListener('DOMContentLoaded', function() {
+      // Trigger animations on page load
+      const categories = document.querySelectorAll('.category');
+      categories.forEach((category, index) => {
+        category.style.animationDelay = `${index * 0.1}s`;
+      });
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Toggle mobile menu open/close and icon change
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    // Close menu helper function
+    function closeMenu() {
+      if (mobileMenu.classList.contains('open')) {
+        mobileMenu.classList.remove('open');
+        menuToggle.textContent = '☰';
+      }
+    }
+
+    // Close menu when clicking outside the menu (on mobile)
+    document.addEventListener('click', (event) => {
+      if (
+        mobileMenu.classList.contains('open') &&
+        !mobileMenu.contains(event.target) &&
+        event.target !== menuToggle
+      ) {
+        closeMenu();
+      }
+    });
+
+    function showPage(pageName) {
+      // Hide all pages
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      
+      // Show selected page
+      document.getElementById(pageName).classList.add('active');
+      
+      // Update navigation (desktop)
+      const navLinks = document.querySelectorAll('nav:not(#mobile-menu) .nav-link');
+      navLinks.forEach(link => link.classList.remove('active'));
+      // Find the clicked link by event or fallback
+      // Since event is not passed here, we update based on pageName
+      navLinks.forEach(link => {
+        if(link.getAttribute('onclick')?.includes(`showPage('${pageName}')`)) {
+          link.classList.add('active');
+        }
+      });
+
+      // Update navigation (mobile)
+      const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
+      mobileLinks.forEach(link => link.classList.remove('active'));
+      mobileLinks.forEach(link => {
+        if(link.getAttribute('onclick')?.includes(`showPage('${pageName}')`)) {
+          link.classList.add('active');
+        }
+      });
+      
+      // Scroll to top
+      window.scrollTo(0, 0);
+
+      // Close mobile menu on page change
+      closeMenu();
+    }
+
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Get form data
+      const formData = new FormData(event.target);
+      const data = Object.fromEntries(formData);
+      
+      // Simulate form submission
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      
+      // Reset form
+      event.target.reset();
+    }
+
+    // Add smooth scrolling for anchor links & animations on load
+    document.addEventListener('DOMContentLoaded', function() {
+      const categories = document.querySelectorAll('.category');
+      categories.forEach((category, index) => {
+        category.style.animationDelay = `${index * 0.1}s`;
+      });
+    });
+  </script>
+</body>
+</html>

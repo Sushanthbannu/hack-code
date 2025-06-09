@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><body>
+<h2>Manage Books</h2>
+<form method="POST">
+  Title: <input name="title" type="text"><br>
+  URL: <input name="url" type="text"><br>
+  Thumbnail (optional): <input name="thumbnail" type="text"><br>
+  <button type="submit">Add Book</button>
+</form>
+<ul>
+{% for book in books %}
+  <li><strong>{{ book.title }}</strong> - {{ book.url }}</li>
+{% endfor %}
+</ul>
+<a href="/admin/dashboard">Back</a>
+</body></html>

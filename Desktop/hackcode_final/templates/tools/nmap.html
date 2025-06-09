@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nmap Full Guide - Hack & Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      background-attachment: fixed;
+      color: #ffffff;
+      scroll-behavior: smooth;
+      display: flex;
+      padding-top:10rem;
+    }
+    .sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 300px;
+      height: calc(100% - 100px);
+      overflow-y: auto;
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-right: 2px solid #00C2FF;
+    }
+    .sidebar h3 {
+      color: #00C2FF;
+      margin-bottom: 0.5rem;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .sidebar ul li a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+    .sidebar ul li a:hover {
+      color: #00C2FF;
+    }
+    .main-content {
+      margin-left: 300px;
+      width: calc(100% - 300px);
+      padding: 2rem;
+      padding-top: 2rem;
+    }
+    .content-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+   
+  </style>
+</head>
+<body>
+
+    <header>
+        <link rel="stylesheet" href="style_mobile.css">
+    <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo 8.png" alt="Hack & Code Logo" style="height: 80px; width: auto;" />
+        <span style="font-size: 2.5rem; font-weight:10; color: #00C2FF; font-family: 'Bauhaus 93', sans-serif;">HACK & CODE</span>
+      </div>
+    <div class="tagline">Learn | Build | Secure </div>
+    <nav>
+      <a href="index.html" onclick="showPage('home')" class="nav-link active">Home</a>
+      <a href="index.html" onclick="showPage('about')" class="nav-link">About</a>
+      <a href="index.html" onclick="showPage('courses')" class="nav-link">Courses</a>
+      <a href="index.html" onclick="showPage('contact')" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+
+  <div class="sidebar">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#what-is">What is Nmap?</a></li>
+      <li><a href="#installation">Installation</a></li>
+      <li><a href="#syntax">Basic Syntax</a></li>
+      <li><a href="#common-scans">Common Scans</a></li>
+      <li><a href="#advanced">Advanced Techniques</a></li>
+      <li><a href="#nse">Script Scanning (NSE)</a></li>
+      <li><a href="#saving">Saving Results</a></li>
+      <li><a href="#examples">Practical Examples</a></li>
+      <li><a href="#zenmap">Nmap GUI - Zenmap</a></li>
+      <li><a href="#tips">Real World Tips</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <section class="content-section">
+      <h1>Nmap Complete Guide</h1>
+
+      <h2 id="what-is">What is Nmap?</h2>
+      <p>Nmap is a powerful network scanning tool used for network discovery and security auditing. It is widely used by security professionals, system administrators, and ethical hackers.</p>
+
+      <h2 id="installation">Installation</h2>
+      <p><strong>Windows:</strong> Download from <a href="https://nmap.org/download.html" target="_blank">nmap.org</a></p>
+      <p><strong>Linux:</strong> <code>sudo apt install nmap</code></p>
+      <p><strong>MacOS:</strong> <code>brew install nmap</code></p>
+
+      <h2 id="syntax">Basic Syntax</h2>
+      <pre><code>nmap [options] [target]</code></pre>
+      <p>Examples:</p>
+      <pre><code>nmap 192.168.1.1
+       nmap example.com</code></pre>
+
+      <h2 id="common-scans">Common Scans</h2>
+      <ul>
+        <li><code>nmap -sn 192.168.1.0/24</code> - Ping Scan</li>
+        <li><code>nmap -p 1-1000 192.168.1.1</code> - Port Scan</li>
+        <li><code>nmap -sV 192.168.1.1</code> - Service Version Detection</li>
+        <li><code>nmap -O 192.168.1.1</code> - OS Detection</li>
+      </ul>
+
+      <h2 id="advanced">Advanced Techniques</h2>
+      <ul>
+        <li><code>nmap -A 192.168.1.1</code> - Aggressive Scan</li>
+        <li><code>nmap -sS 192.168.1.1</code> - Stealth SYN Scan</li>
+        <li><code>nmap --exclude 192.168.1.5 192.168.1.0/24</code> - Exclude Host</li>
+      </ul>
+
+      <h2 id="nse">Script Scanning (NSE)</h2>
+      <ul>
+        <li><code>nmap --script http-title 192.168.1.1</code></li>
+        <li><code>nmap -sC 192.168.1.1</code> - Default scripts</li>
+        <li><code>nmap --script vuln 192.168.1.1</code> - Vulnerability scan</li>
+      </ul>
+
+      <h2 id="saving">Saving Results</h2>
+      <ul>
+        <li><code>-oN output.txt</code> - Normal text file</li>
+        <li><code>-oX output.xml</code> - XML format</li>
+        <li><code>-oG output.gnmap</code> - Grepable format</li>
+      </ul>
+
+      <h2 id="examples">Practical Examples</h2>
+      <ul>
+        <li><code>nmap -sn 192.168.1.0/24</code> - Find live hosts</li>
+        <li><code>nmap -p 80,443 192.168.1.1</code> - Check web ports</li>
+      </ul>
+
+      <h2 id="zenmap">Nmap GUI - Zenmap</h2>
+      <p>Zenmap is the official GUI for Nmap. It provides an easy-to-use interface and visual network mapping. Install with:</p>
+      <pre><code>sudo apt install zenmap</code></pre>
+
+      <h2 id="tips">Real World Tips</h2>
+      <ul>
+        <li>Always scan with permission</li>
+        <li>Use stealth scans carefully</li>
+        <li>Combine Nmap with Wireshark, Metasploit, etc.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

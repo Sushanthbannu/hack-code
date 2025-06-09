@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hack & Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      background-attachment: fixed;
+      color: #ffffff;
+      scroll-behavior: smooth;
+      display: flex;
+    }
+    .sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 300px;
+      height: calc(100% - 100px);
+      overflow-y: auto;
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-right: 2px solid #00C2FF;
+    }
+    .sidebar h3 {
+      color: #00C2FF;
+      margin-bottom: 0.5rem;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .sidebar ul li a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+    .sidebar ul li a:hover {
+      color: #00C2FF;
+    }
+    .main-content {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+      padding-left:50px;
+    }
+    .content-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="style_mobile.css">
+    <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo 8.png" alt="Hack & Code Logo" style="height: 80px; width: auto;" />
+        <span style="font-size: 2.5rem; font-weight:10; color: #00C2FF; font-family: 'Bauhaus 93', sans-serif;">HACK & CODE</span>
+      </div>
+    <div class="tagline">Learn | Build | Secure </div>
+    <nav>
+      <a href="index.html" onclick="showPage('home')" class="nav-link active">Home</a>
+      <a href="index.html" onclick="showPage('about')" class="nav-link">About</a>
+      <a href="index.html" onclick="showPage('courses')" class="nav-link">Courses</a>
+      <a href="index.html" onclick="showPage('contact')" class="nav-link">Contact</a>
+    </nav>
+  </header>
+  <div class="sidebar">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#what-is">What is Ethical Hacking?</a></li>
+      <li><a href="#importance">Why Ethical Hacking is Important</a></li>
+      <li><a href="#skills">Skills Required</a></li>
+      <li><a href="#tools">Popular Tools</a></li>
+      <li><a href="#tags">Tags</a></li>
+      <li><a href="#category">Category</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div id="ethical-hacking" class="page active">
+      <section class="content-section">
+        <h1>Introduction to Ethical Hacking</h1>
+
+        <h2 id="what-is">What is Ethical Hacking?</h2>
+        <p>Ethical hacking involves legally breaking into computers and devices to test an organization's defenses. It's among the most exciting careers in cybersecurity. Ethical hackers are hired to identify vulnerabilities before malicious attackers do.</p>
+        <img src="https://cdn.pixabay.com/photo/2020/10/07/14/34/hacker-5637085_1280.jpg" alt="Ethical Hacker working on a laptop">
+
+        <h2 id="importance">Why Ethical Hacking is Important</h2>
+        <p>With the rise of cyber threats, organizations must proactively defend their systems. Ethical hackers help prevent data breaches, identity theft, and financial loss by uncovering weaknesses and patching them before real attackers strike.</p>
+
+        <h2 id="skills">Skills Required</h2>
+        <ul>
+          <li>Networking Knowledge</li>
+          <li>Understanding of Operating Systems (especially Linux)</li>
+          <li>Programming Skills (Python, Bash, etc.)</li>
+          <li>Familiarity with Security Tools</li>
+          <li>Strong Analytical Thinking</li>
+        </ul>
+
+        <h2 id="tools">Popular Tools</h2>
+        <ul>
+          <li>Nmap</li>
+          <li>Wireshark</li>
+          <li>Burp Suite</li>
+          <li>Metasploit</li>
+          <li>John the Ripper</li>
+        </ul>
+
+        <h2 id="tags">Tags</h2>
+        <ul>
+          <li>Security</li>
+          <li>Penetration Testing</li>
+          <li>Cyber Defense</li>
+          <li>Reconnaissance</li>
+        </ul>
+
+        <h2 id="category">Category</h2>
+        <p>Ethical Hacking</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

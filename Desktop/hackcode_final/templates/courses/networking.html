@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hack & Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      background-attachment: fixed;
+      color: #ffffff;
+      scroll-behavior: smooth;
+      display: flex;
+    }
+    .sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 220px;
+      height: calc(100% - 100px);
+      overflow-y: auto;
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-right: 2px solid #00C2FF;
+    }
+    .sidebar h3 {
+      color: #00C2FF;
+      margin-bottom: 0.5rem;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .sidebar ul li a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+    .sidebar ul li a:hover {
+      color: #00C2FF;
+    }
+    .main-content {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+      padding-left:50px;
+    }
+    .content-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+    #toc {
+      position: fixed;
+      top: 100px;
+      left: 20px;
+      width: 240px;
+      height: 80vh;
+      overflow-y: auto;
+      background: #f4f4f4;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      font-size: 0.95em;
+    }
+    #toc h3 {
+      margin-top: 0;
+      font-size: 1.25em;
+      text-align: center;
+    }
+    #toc ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #toc ul li {
+      margin: 0.6em 0;
+    }
+    #toc ul li a {
+      text-decoration: none;
+      color: #007acc;
+    }
+    #toc ul li a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      margin-left: 280px;
+      padding: 2em 3em;
+      max-width: 900px;
+    }
+    main img {
+      max-width: 100%;
+      height: auto;
+      margin: 1em 0;
+      border-radius: 8px;
+    }
+    .logo-right {
+      float: right;
+      width: 130px;
+      margin-left: 20px;
+    }
+    section {
+      margin-bottom: 3em;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    pre {
+      background: #eee;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    a {
+      color: #007acc;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="style_mobile.css">
+    <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo 8.png" alt="Hack & Code Logo" style="height: 80px; width: auto;" />
+        <span style="font-size: 2.5rem; font-weight:10; color: #00C2FF; font-family: 'Bauhaus 93', sans-serif;">HACK & CODE</span>
+      </div>
+    <div class="tagline">Learn | Build | Secure </div>
+    <nav>
+      <a href="index.html" onclick="showPage('home')" class="nav-link active">Home</a>
+      <a href="index.html" onclick="showPage('about')" class="nav-link">About</a>
+      <a href="index.html" onclick="showPage('courses')" class="nav-link">Courses</a>
+      <a href="index.html" onclick="showPage('contact')" class="nav-link">Contact</a>
+    </nav>
+  </header>
+  <div class="sidebar">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#what-is-networking">What is Networking?</a></li>
+      <li><a href="#network-types">Types of Networks</a></li>
+      <li><a href="#network-topologies">Network Topologies</a></li>
+      <li><a href="#ip-addressing">IP Addressing</a></li>
+      <li><a href="#subnetting">Subnetting</a></li>
+      <li><a href="#network-protocols">Common Network Protocols</a></li>
+      <li><a href="#network-devices">Network Devices</a></li>
+      <li><a href="#tcp-ip-model">TCP/IP Model</a></li>
+      <li><a href="#dns">Domain Name System (DNS)</a></li>
+      <li><a href="#network-security">Network Security Basics</a></li>
+      <li><a href="#basic-commands">Basic Networking Commands</a></li>
+      <li><a href="#learning-resources">Learning Resources</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div id="ethical-hacking" class="page active">
+      <section class="content-section">
+        <h1>Introduction to Web Development</h1>
+  <section id="what-is-networking">
+      <h2>What is Networking?</h2>
+      <img src="data:image/png;base64,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" alt="Network Diagram" class="logo-right" />
+      <p>Networking is the process of connecting computers and other devices to share data and resources. It enables communication between devices, allowing file sharing, internet access, and resource management.</p>
+      <p>Networks can be as simple as two computers connected directly or as complex as the global internet connecting billions of devices.</p>
+    </section>
+
+    <section id="network-types">
+      <h2>Types of Networks</h2>
+      <ul>
+        <li><strong>LAN (Local Area Network):</strong> A network confined to a small area like a home, office, or building.</li>
+        <li><strong>WAN (Wide Area Network):</strong> A network that spans large geographic areas, such as the internet.</li>
+        <li><strong>MAN (Metropolitan Area Network):</strong> Covers a city or campus-sized area.</li>
+        <li><strong>PAN (Personal Area Network):</strong> Very small network for personal devices (e.g., Bluetooth).</li>
+      </ul>
+    </section>
+
+    <section id="network-topologies">
+      <h2>Network Topologies</h2>
+      <p>Topology refers to the layout or arrangement of devices in a network. Common types include:</p>
+      <ul>
+        <li><strong>Bus:</strong> All devices connected to a single cable.</li>
+        <li><strong>Star:</strong> Devices connected to a central hub or switch.</li>
+        <li><strong>Ring:</strong> Devices connected in a circular fashion.</li>
+        <li><strong>Mesh:</strong> Devices interconnected with many redundant connections.</li>
+        <li><strong>Tree:</strong> Hierarchical topology combining star and bus.</li>
+      </ul>
+    </section>
+
+    <section id="ip-addressing">
+      <h2>IP Addressing</h2>
+      <p>An IP (Internet Protocol) address uniquely identifies a device on a network. There are two versions:</p>
+      <ul>
+        <li><strong>IPv4:</strong> Uses 32-bit addresses (e.g., 192.168.1.1).</li>
+        <li><strong>IPv6:</strong> Uses 128-bit addresses to support more devices (e.g., 2001:0db8::1).</li>
+      </ul>
+      <p>IP addresses consist of a network part and a host part, which helps route data correctly.</p>
+    </section>
+
+    <section id="subnetting">
+      <h2>Subnetting</h2>
+      <p>Subnetting divides a large network into smaller subnetworks or subnets to improve performance and security.</p>
+      <p>Each subnet has its own range of IP addresses. Subnet masks determine which part of the IP address refers to the network and which to the host.</p>
+      <p>Example subnet mask: <code>255.255.255.0</code></p>
+    </section>
+
+    <section id="network-protocols">
+      <h2>Common Network Protocols</h2>
+      <ul>
+        <li><strong>TCP (Transmission Control Protocol):</strong> Ensures reliable data transmission.</li>
+        <li><strong>UDP (User Datagram Protocol):</strong> Faster but unreliable, used for streaming.</li>
+        <li><strong>HTTP/HTTPS:</strong> Protocols for web browsing.</li>
+        <li><strong>FTP:</strong> File Transfer Protocol.</li>
+        <li><strong>DNS:</strong> Resolves domain names to IP addresses.</li>
+        <li><strong>DHCP:</strong> Assigns IP addresses dynamically.</li>
+      </ul>
+    </section>
+
+    <section id="network-devices">
+      <h2>Network Devices</h2>
+      <ul>
+        <li><strong>Router:</strong> Directs traffic between different networks.</li>
+        <li><strong>Switch:</strong> Connects devices within a network and manages data traffic.</li>
+        <li><strong>Hub:</strong> Basic device that broadcasts data to all devices.</li>
+        <li><strong>Modem:</strong> Connects a network to the internet.</li>
+        <li><strong>Access Point:</strong> Allows wireless devices to connect to a wired network.</li>
+      </ul>
+    </section>
+
+    <section id="tcp-ip-model">
+      <h2>TCP/IP Model</h2>
+      <p>The TCP/IP model is a conceptual framework for data communication with four layers:</p>
+      <ul>
+        <li><strong>Network Interface Layer:</strong> Physical network hardware.</li>
+        <li><strong>Internet Layer:</strong> Routing of packets via IP.</li>
+        <li><strong>Transport Layer:</strong> End-to-end communication (TCP/UDP).</li>
+        <li><strong>Application Layer:</strong> Protocols like HTTP, FTP, DNS.</li>
+      </ul>
+    </section>
+
+    <section id="dns">
+      <h2>Domain Name System (DNS)</h2>
+      <p>DNS translates human-friendly domain names (like <code>example.com</code>) into IP addresses computers use.</p>
+      <p>When you type a URL into your browser, DNS servers resolve it to the server’s IP so your device can connect.</p>
+    </section>
+
+    <section id="network-security">
+      <h2>Network Security Basics</h2>
+      <ul>
+        <li>Use firewalls to control incoming and outgoing network traffic.</li>
+        <li>Enable encryption protocols like WPA3 for Wi-Fi security.</li>
+        <li>Regularly update software to patch vulnerabilities.</li>
+        <li>Use VPNs for secure remote access.</li>
+        <li>Monitor logs for suspicious activity.</li>
+      </ul>
+    </section>
+
+    <section id="basic-commands">
+      <h2>Basic Networking Commands</h2>
+      <p>Some essential commands you can try on Linux or Windows terminal:</p>
+      <ul>
+        <li><code>ping [address]</code> - Checks connectivity to another device.</li>
+        <li><code>ipconfig</code> (Windows) / <code>ifconfig</code> or <code>ip addr</code> (Linux) - Shows network interfaces.</li>
+        <li><code>tracert</code> (Windows) / <code>traceroute</code> (Linux) - Shows path packets take to reach a host.</li>
+        <li><code>nslookup [domain]</code> - Queries DNS information.</li>
+        <li><code>netstat</code> - Displays active connections and listening ports.</li>
+        <li><code>ssh user@host</code> - Secure remote login.</li>
+      </ul>
+    </section>
+
+    <section id="learning-resources">
+      <h2>Learning Resources</h2>
+      <ul>
+        <li><a href="https://www.cisco.com/c/en/us/solutions/enterprise-networks/what-is-networking.html" target="_blank">Cisco Networking Basics</a></li>
+        <li><a href="https://www.geeksforgeeks.org/computer-network-tutorials/" target="_blank">GeeksforGeeks Computer Networks</a></li>
+        <li><a href="https://www.udemy.com/course/the-complete-networking-fundamentals-course/" target="_blank">Complete Networking Fundamentals (Udemy)</a></li>
+        <li><a href="https://www.tutorialspoint.com/computer_fundamentals/computer_networking.htm" target="_blank">TutorialsPoint Networking</a></li>
+      </ul>
+    </section>
+
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>Networking is the backbone of modern digital communication. Understanding the fundamentals helps you troubleshoot issues, design networks, and secure data transfers. Whether you want to become a network engineer, system admin, or just improve your IT skills, mastering networking basics is essential.</p>
+    </section>
+
+
+
+   
+
+
+</main>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+</body>
+</html>

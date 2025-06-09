@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aircrack-ng Full Guide - Hack & Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: white;
+      display: flex;
+    }
+    .sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 300px;
+      height: calc(100% - 100px);
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-right: 2px solid #00C2FF;
+      overflow-y: auto;
+    }
+    .sidebar h3 {
+      color: #00C2FF;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .sidebar ul li a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+    .sidebar ul li a:hover {
+      color: #00C2FF;
+    }
+    .main-content {
+      margin-left: 300px;
+      width: calc(100% - 300px);
+      padding: 2rem;
+    }
+    .content-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+        <link rel="stylesheet" href="style_mobile.css">
+       <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo 8.png" alt="Hack & Code Logo" style="height: 80px; width: auto;" />
+        <span style="font-size: 2.5rem; font-weight:10; color: #00C2FF; font-family: 'Bauhaus 93', sans-serif;">HACK & CODE</span>
+      </div>
+    <div class="tagline">Learn | Build | Secure </div>
+    <nav>
+      <a href="index.html" onclick="showPage('home')" class="nav-link active">Home</a>
+      <a href="index.html" onclick="showPage('about')" class="nav-link">About</a>
+      <a href="index.html" onclick="showPage('courses')" class="nav-link">Courses</a>
+      <a href="index.html" onclick="showPage('contact')" class="nav-link">Contact</a>
+      <a href="#Linux-basics-pdf"  class="nav-link">Linux basics pdf</a>
+      
+    </nav>
+  </header>
+
+
+  <div class="sidebar">
+    <h3>Table of Contents</h3>
+    <ul>
+      <li><a href="#what-is">What is Aircrack-ng?</a></li>
+      <li><a href="#install">Installation</a></li>
+      <li><a href="#workflow">Workflow Overview</a></li>
+      <li><a href="#monitor">Enable Monitor Mode</a></li>
+      <li><a href="#capture">Capture Handshake</a></li>
+      <li><a href="#crack">Crack WPA/WPA2</a></li>
+      <li><a href="#ethics">Ethical Usage</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <section class="content-section">
+      <h1>Aircrack-ng Complete Guide</h1>
+
+      <h2 id="what-is">What is Aircrack-ng?</h2>
+      <p>Aircrack-ng is a suite of tools for auditing wireless networks. It can capture and crack WEP and WPA/WPA2-PSK keys.</p>
+      <img src="https://www.aircrack-ng.org/resources/aircrack-ng-new-logo.jpg" alt="Aircrack-ng logo">
+
+      <h2 id="install">Installation</h2>
+      <p>On Kali Linux it's pre-installed. Otherwise:</p>
+      <pre><code>sudo apt install aircrack-ng</code></pre>
+
+      <h2 id="workflow">Workflow Overview</h2>
+      <ul>
+        <li>Enable monitor mode (airmon-ng)</li>
+        <li>Capture handshake (airodump-ng)</li>
+        <li>Crack password (aircrack-ng)</li>
+      </ul>
+
+      <h2 id="monitor">Enable Monitor Mode</h2>
+      <pre><code>sudo airmon-ng start wlan0</code></pre>
+      <p>Check with <code>iwconfig</code>. Monitor mode is required for packet capture.</p>
+
+      <h2 id="capture">Capture Handshake</h2>
+      <pre><code>sudo airodump-ng wlan0mon</code></pre>
+      <p>Target a BSSID and channel:</p>
+      <pre><code>sudo airodump-ng --bssid XX:XX:XX:XX:XX:XX -c 6 -w capture wlan0mon</code></pre>
+      <img style="width: 1000px; height:auto;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxRHFVyVyjl-XauKi0ImI2CbjMSZ5vaw5UA&s" alt="Airodump-ng handshake">
+
+      <h2 id="crack">Crack WPA/WPA2</h2>
+      <pre><code>aircrack-ng capture-01.cap -w wordlist.txt</code></pre>
+      <p>The success depends on the strength of the password and your wordlist.</p>
+
+      <h2 id="ethics">Ethical Usage</h2>
+      <ul>
+        <li>Only test networks you own or have explicit permission for</li>
+        <li>Use responsibly in lab environments</li>
+        <li>Practice ethical hacking principles</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>

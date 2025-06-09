@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hack & Code</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      background-attachment: fixed;
+      color: #ffffff;
+      scroll-behavior: smooth;
+      display: flex;
+    }
+    .sidebar {
+      position: fixed;
+      top: 100px;
+      left: 0;
+      width: 220px;
+      height: calc(100% - 100px);
+      overflow-y: auto;
+      background-color: #1a1a1a;
+      padding: 1.5rem;
+      border-right: 2px solid #00C2FF;
+    }
+    .sidebar h3 {
+      color: #00C2FF;
+      margin-bottom: 0.5rem;
+    }
+    .sidebar ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    .sidebar ul li a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+    .sidebar ul li a:hover {
+      color: #00C2FF;
+    }
+    .main-content {
+      margin-left: 240px;
+      width: calc(100% - 240px);
+      padding-left:50px;
+    }
+    .content-section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <link rel="stylesheet" href="style_mobile.css">
+    <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="logo 8.png" alt="Hack & Code Logo" style="height: 80px; width: auto;" />
+        <span style="font-size: 2.5rem; font-weight:10; color: #00C2FF; font-family: 'Bauhaus 93', sans-serif;">HACK & CODE</span>
+      </div>
+    <div class="tagline">Learn | Build | Secure </div>
+    <nav>
+      <a href="index.html" onclick="showPage('home')" class="nav-link active">Home</a>
+      <a href="index.html" onclick="showPage('about')" class="nav-link">About</a>
+      <a href="index.html" onclick="showPage('courses')" class="nav-link">Courses</a>
+      <a href="index.html" onclick="showPage('contact')" class="nav-link">Contact</a>
+    </nav>
+  </header>
+  <div class="sidebar">
+    <h3>Table of Contents</h3>
+   <ul>
+      <li><a href="#what-is-cybersecurity">What is Cybersecurity?</a></li>
+      <li><a href="#importance">Importance of Cybersecurity</a></li>
+      <li><a href="#key-concepts">Key Concepts</a></li>
+      <li><a href="#threats">Common Cybersecurity Threats</a></li>
+      <li><a href="#best-practices">Best Practices</a></li>
+      <li><a href="#career-opportunities">Career Opportunities</a></li>
+      <li><a href="#conclusion">Conclusion</a></li>
+    </ul>>
+  </div>
+  <div class="main-content">
+    <div id="ethical-hacking" class="page active">
+      <section class="content-section">
+       
+    <h1>Introduction to Cybersecurity</h1>
+
+    <section id="what-is-cybersecurity">
+      <h2>What is Cybersecurity?</h2>
+      <p>
+        Cybersecurity refers to the practice of protecting computers, servers, mobile devices, electronic systems, networks, and data from malicious attacks. It encompasses technologies, processes, and controls designed to safeguard digital assets from cyber threats.
+      </p>
+    </section>
+
+    <section id="importance">
+      <h2>Importance of Cybersecurity</h2>
+      <p>
+        In an increasingly digital world, cybersecurity is critical for individuals and organizations to protect sensitive information such as personal data, financial records, and intellectual property. Cyber attacks can lead to data breaches, financial loss, and damage to reputation.
+      </p>
+    </section>
+
+    <section id="key-concepts">
+      <h2>Key Concepts in Cybersecurity</h2>
+      <p>
+        Key pillars of cybersecurity include:
+      </p>
+      <ul>
+        <li><strong>Confidentiality:</strong> Ensuring information is accessible only to those authorized.</li>
+        <li><strong>Integrity:</strong> Maintaining the accuracy and completeness of data.</li>
+        <li><strong>Availability:</strong> Ensuring reliable access to data and systems when needed.</li>
+      </ul>
+    </section>
+
+    <section id="threats">
+      <h2>Common Cybersecurity Threats</h2>
+      <p>
+        Some common threats include:
+      </p>
+      <ul>
+        <li><strong>Malware:</strong> Malicious software like viruses, ransomware, and spyware.</li>
+        <li><strong>Phishing:</strong> Fraudulent attempts to obtain sensitive information.</li>
+        <li><strong>Denial of Service (DoS):</strong> Attacks that overwhelm systems to make them unavailable.</li>
+        <li><strong>Man-in-the-Middle:</strong> Intercepting communications to steal or alter information.</li>
+      </ul>
+    </section>
+
+    <section id="best-practices">
+      <h2>Best Practices for Cybersecurity</h2>
+      <p>
+        To improve cybersecurity, individuals and organizations should:
+      </p>
+      <ul>
+        <li>Use strong, unique passwords and enable multi-factor authentication.</li>
+        <li>Keep software and systems updated with the latest patches.</li>
+        <li>Educate users about recognizing phishing and other social engineering attacks.</li>
+        <li>Implement firewalls, antivirus, and intrusion detection systems.</li>
+        <li>Regularly backup important data and have an incident response plan.</li>
+      </ul>
+    </section>
+
+    <section id="career-opportunities">
+      <h2>Career Opportunities in Cybersecurity</h2>
+      <p>
+        Cybersecurity offers diverse career paths including security analyst, incident responder, penetration tester, security engineer, and cybersecurity consultant. Certifications like CISSP, CompTIA Security+, and CEH are highly valued.
+      </p>
+    </section>
+
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>
+        Cybersecurity is a vital field that protects the digital infrastructure of our modern world. As cyber threats evolve, staying informed and proactive is essential for individuals and organizations to maintain security and trust.
+      </p>
+    </section>
+  
+</div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
